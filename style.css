@@ -1,0 +1,42 @@
+body {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* استخدام النسبة المئوية */
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 90vmin; /* عرض اللوحة 90% من أقل قيمة بين العرض والارتفاع */
+    height: 90vmin; /* ارتفاع اللوحة 90% من أقل قيمة بين العرض والارتفاع */
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em; /* زيادة حجم الخط ليتناسب مع الشاشة */
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: ##f0e68c; /* لون تأثير hover */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
